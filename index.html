@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(240, 248, 255, 0.892);
+        }
+        .main{
+            display: flex;
+            column-gap: 10px;
+        }
+        .main .circle{
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background-color: rgb(19, 47, 225);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            animation: sample 1s ease-in-out infinite alternate;
+
+        }
+        .circle:nth-child(1){
+animation-delay: -0.25s;
+        }
+        .circle:nth-child(2){
+animation-delay: -.5s;
+background-color: rgb(230, 27, 27);
+        }
+        .circle:nth-child(3){
+animation-delay: -0.75s ;
+background-color: rgb(245, 219, 104);
+        }
+        .circle:nth-child(4){
+  animation-delay: -1s;  
+  background-color: rgb(15, 126, 15);        
+        }
+        @keyframes sample {
+            from{
+                transform: translateY(-8px);
+            }
+            
+            to{
+                transform: translateY(8px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+    </div>
+</body>
+</html>
